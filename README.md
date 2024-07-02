@@ -12,17 +12,23 @@ This PowerShell script automates the process of copying PostgreSQL server parame
 
 ### Usage
 
+Open powershell and login using the following command:
+
+```powershell
+az login
+```
+
 To execute the script, use the following command:
 
-powershell
-
+```powershell
 .\copy-server-parameters.ps1 -JsonFilePath "Path\To\Your\JsonFile.json" -SourceSubscriptionId "Value1" -SourceResourceGroup "Value2" -SingleServerName "Value3" -TargetSubscriptionId "Value4" -TargetResourceGroup "Value5" -FlexibleServerName "Value6"
+```
 
 Example:
 
-powershell
-
+```powershell
 .\copy-server-parameters.ps1 -JsonFilePath "C:\Automigration\JsonFile.json" -SourceSubscriptionId "11111111-1111-1111-1111-111111111111" -SourceResourceGroup "my-source-rg" -SingleServerName "source-server-single" -TargetSubscriptionId "11111111-1111-1111-1111-111111111111" -TargetResourceGroup "my-target-rg" -FlexibleServerName "target-server-flexible"
+```
 
 ### Parameters
 
@@ -53,6 +59,6 @@ powershell
 ### Notes
 
     Ensure that you have the necessary permissions to execute Azure CLI commands and modify server configurations.
-    Review the parameters in the $DoNotOverwrite and $Overwrite arrays to ensure they meet your requirements.
+    Validate that your custom settings have been copied successfully.
 
 This script helps streamline the migration process by automating the copying of server parameters, ensuring consistency and reducing manual effort.
